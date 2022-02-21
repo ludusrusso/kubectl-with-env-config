@@ -2,4 +2,4 @@
 
 echo $KUBECONFIG | base64 -d > $HOME/.kube/config
 export KUBECONFIG=$HOME/.kube/config
-kubectl port-forward -n $NAMESPACE $POD $PORTS
+kubectl port-forward -n $NAMESPACE $POD $PORTS --address='0.0.0.0'
